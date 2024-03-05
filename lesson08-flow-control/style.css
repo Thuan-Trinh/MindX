@@ -1,0 +1,16 @@
+.color-linear {
+    background: linear-gradient(90deg, rgb(14, 165, 234), rgb(11, 209, 209) 51%, rgb(14, 165, 234)) var(--x, 0)/200%;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;}
+
+    a{
+        transition: all 0.3s ease 0s;
+        text-decoration: none;
+            color: #000000;
+    }
+:root{
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;    
+}
