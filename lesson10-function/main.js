@@ -63,6 +63,20 @@ GPA= (math + english + chemistry)/3;
 
 2. Thông báo kết quả cho phụ huynh học sinh theo cú pháp:
 'học sinh <name> xếp loại: <XYZ>
+
+
+Yêu cầu:
+    1. Viết function tính GPA
+        + Input: math, chemistry, english
+        + Output: GPA
+    2. Viết function xếp loại
+        + Input: GPA
+        + Output: "Giỏi" | "Khá" | "Trung Bình" | "Yếu"
+    3. Viết function xếp loại học sinh
+    main()
+    input: mảng lớp học
+    logic: thông báo cho phụ huynh học sinh
+    console.log('Học sinh <> Xếp loại <>)
 */
 
 
@@ -96,6 +110,11 @@ function sum(a, b) {
     return a + b;
 }
 
+//anynomus function
+const minus = function (a, b) {
+    return a - b;
+}
+
 const sumBetweenForAndFive = sum(4, 5);
 console.log('sumBetweenForAndFive', sumBetweenForAndFive);
 
@@ -108,15 +127,15 @@ function caculator(a, b, operator) {
     //Your code here
     switch (operator) {
         case '+':
-            return a+b;
+            return a + b;
         case '-':
-            return a-b;
+            return a - b;
 
         case '*':
-            return a*b;
+            return a * b;
 
         case '/':
-            return a/b;
+            return a / b;
 
         default:
             result = 'Operator is invalid';
@@ -128,3 +147,5 @@ console.log(caculator(10, 5, '+'));
 console.log(caculator(10, 5, '-'));
 console.log(caculator(10, 5, '*'));
 console.log(caculator(10, 5, '/'));
+console.log(caculator(10, 5, '!'));
+
