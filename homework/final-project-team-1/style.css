@@ -45,7 +45,7 @@ h1 {
 }
 
 body {
-  /* width: min-content; */
+  max-width: 1920px;
   background: var(--neutral-01);
 }
 
@@ -348,48 +348,42 @@ nav ul li a:hover::after {
   text-transform: uppercase;
 }
 
-.novel-item-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.novel-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
   gap: 2rem;
-
-  width: 100%;
-}
-
-.novel-item-left,
-.novel-item-right {
-  width: 50%;
 }
 
 .novel-item-left {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
-
+  align-items: start;
   gap: 1rem;
+
 }
 
-.novel-item-left img {
+.img-card{
   width: 100%;
-  object-fit: cover;
+  height: 100%;
   overflow: hidden;
   border-radius: 1rem;
 }
 
-.novel-title {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 0;
+.img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .novel-title h6 {
   color: var(--color-primary);
-
   font-family: "Poppins";
   font-size: 1.9375rem;
   font-style: normal;
@@ -399,7 +393,6 @@ nav ul li a:hover::after {
 
 .novel-title p {
   color: var(--neutral-05);
-
   font-family: "Inter";
   font-size: 1rem;
   font-style: normal;
@@ -407,20 +400,11 @@ nav ul li a:hover::after {
   line-height: 150%;
 }
 
-.novel-item-right{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 2rem 2rem;
-}
-
 .novel-items{
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
 }
 
-.novel-items img{
-  width: 100%;
-  object-fit: cover;
-  overflow: hidden;
-  border-radius: 1rem;
-}
