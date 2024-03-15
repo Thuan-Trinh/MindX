@@ -325,3 +325,102 @@ nav ul li a:hover::after {
   object-fit: contain;
   border-radius: 1rem;
 }
+
+/* NOVELTIES SECTION */
+.novelties-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin-bottom: 7.25rem;
+
+  width: 100%;
+}
+
+.novelties-section h2 {
+  color: var(--color-primary);
+
+  font-family: "Poppins";
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
+.novel-item-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  width: 100%;
+}
+
+.novel-item-left,
+.novel-item-right {
+  width: 50%;
+}
+
+.novel-item-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 1rem;
+}
+
+.novel-item-left img {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.novel-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.novel-title h6 {
+  color: var(--color-primary);
+
+  font-family: "Poppins";
+  font-size: 1.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.novel-title p {
+  color: var(--neutral-05);
+
+  font-family: "Inter";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.novel-item-right{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem 2rem;
+}
+
+.novel-items{
+  width: 100%;
+}
+
+.novel-items img{
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 1rem;
+}
