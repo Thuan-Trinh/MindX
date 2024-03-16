@@ -783,7 +783,6 @@ footer {
   align-items: center;
   gap: 1.75rem;
 
-
   color: var(--neutral-03);
   font-family: "Inter";
   font-size: 0.75rem;
@@ -797,6 +796,6 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-gap: 1.5rem;
-
+  align-items: center;
+  gap: 1.5rem;
 }
