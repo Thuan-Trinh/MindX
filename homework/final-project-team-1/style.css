@@ -17,6 +17,9 @@
   --neutral-03: #e0e6eb;
   --neutral-04: #9dadbe;
   --neutral-05: #52667a;
+
+  --border-img: 1rem;
+  --border-cta-btn: 0.5rem;
 }
 
 a,
@@ -33,6 +36,10 @@ h6 {
   text-decoration: none;
 }
 
+p{
+  text-align: justify;
+}
+
 h1 {
   font-family: "Poppins";
   font-size: 3.9375rem;
@@ -44,8 +51,19 @@ h1 {
   color: var(--color-primary);
 }
 
+h2 {
+  color: var(--color-primary);
+
+  font-family: "Poppins";
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+
 body {
-  max-width: 1920px;
+  /* max-width: 1440px; */
   background: var(--neutral-01);
 }
 
@@ -189,16 +207,17 @@ body {
 nav ul li a::after {
   content: "";
   width: 0;
-  height: 2px;
+  height: 1.5px;
   background: var(--color-primary);
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%);
   bottom: -0.1875rem;
   transition: 0.5s;
 }
 
 nav ul li a:hover::after {
-  width: 100%;
+  width: 60%;
 }
 
 .header-nav nav ul li a:hover {
@@ -211,13 +230,13 @@ nav ul li a:hover::after {
 
 .active::after {
   content: "";
-  width: 100%;
-  height: 2px;
+  width: 60%;
+  height: 1.5px;
   background: var(--color-primary);
   position: absolute;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%);
   bottom: -0.1875rem;
-  transition: 0.5s;
 }
 
 .icons {
@@ -296,15 +315,15 @@ nav ul li a:hover::after {
   border: none;
   background-color: var(--color-primary);
   text-align: center;
-  width: 55.5%;
+  width: 70%;
   height: 3.5rem;
 
-  padding: 0.625rem 2.5rem;
+  padding: 0.625rem 2rem;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 
-  border-radius: 0.5rem;
+  border-radius: var(--border-cta-btn);
 
   color: var(--neutral-01);
   text-transform: uppercase;
@@ -323,7 +342,7 @@ nav ul li a:hover::after {
   width: 100%;
   overflow: hidden;
   object-fit: contain;
-  border-radius: 1rem;
+  border-radius: var(--border-img);
 }
 
 /* NOVELTIES SECTION */
@@ -337,7 +356,7 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-.novelties-section h2 {
+/* .novelties-section h2 {
   color: var(--color-primary);
 
   font-family: "Poppins";
@@ -346,12 +365,13 @@ nav ul li a:hover::after {
   font-weight: 700;
   line-height: 4rem;
   text-transform: uppercase;
-}
+} */
 
 .novel-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  
+  grid-template-rows: 28rem 28rem;
+
   gap: 2rem;
 }
 
@@ -369,11 +389,11 @@ nav ul li a:hover::after {
 
 }
 
-.img-card{
+.img-card {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: var(--border-img);
 }
 
 .img-card img {
@@ -400,7 +420,7 @@ nav ul li a:hover::after {
   line-height: 150%;
 }
 
-.novel-items{
+.novel-items {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -408,3 +428,162 @@ nav ul li a:hover::after {
   gap: 1rem;
 }
 
+/* Cards Block */
+.card-block {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 55rem;
+  gap: 2rem;
+
+  margin-bottom: 7.25rem;
+}
+
+.block-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.block-left-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.block-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+
+  width: 50%;
+}
+
+.block-title p {
+  width: 90%;
+  color: var(--color-primary);
+  font-family: "Inter";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.block-left-img {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--border-img);
+}
+
+.block-left-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.block-left-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.block-left-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.block-right {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--border-img);
+}
+
+.block-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Turn Table Counch Section */
+.turnTableCouch-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 28rem;
+
+  column-gap: 2rem;
+  margin-bottom: 7.25rem;
+}
+
+.turnTable-left-side {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--border-img);
+}
+
+.turnTable-left-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.turnTable-right-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  gap: 2rem;
+
+  width: 100%;
+  height: 100%;
+}
+
+.turnTable-right-side-title {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  gap: 2rem;
+}
+
+.turnTable-right-side-title p {
+  width: 90%;
+  color: var(--color-primary);
+  font-family: "Inter";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.turnTable-right-side-img {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--border-img);
+}
+
+.turnTable-right-side-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
