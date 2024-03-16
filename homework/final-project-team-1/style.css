@@ -614,7 +614,7 @@ nav ul li a:hover::after {
 
 .content {
   position: absolute;
-  width: 37.5%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
