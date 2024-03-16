@@ -22,6 +22,11 @@
   --border-cta-btn: 0.5rem;
 }
 
+input {
+  padding: 0;
+  margin: 0;
+}
+
 a,
 p,
 span,
@@ -36,7 +41,7 @@ h6 {
   text-decoration: none;
 }
 
-p{
+p {
   text-align: justify;
 }
 
@@ -586,4 +591,212 @@ nav ul li a:hover::after {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Newsletter */
+.newsLetter {
+  width: 100%;
+  height: 22.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  margin-bottom: 3rem;
+}
+
+.newsLetter-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  width: 37.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 0rem 4rem;
+}
+
+.content-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content-title h3 {
+  color: var(--color-primary);
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 2.9375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.content-title span {
+  color: var(--color-primary);
+  text-align: center;
+  font-family: "Inter";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  border-bottom: 1px solid var(--neutral-04);
+
+}
+
+.form form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0rem;
+
+
+  align-self: stretch;
+}
+
+.form button {
+  display: flex;
+  height: 2.5rem;
+  padding: 0.5rem 2rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: var(--color-primary);
+}
+
+.form button span {
+  color: var(--neutral-01);
+  text-align: center;
+  font-family: "Inter";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.form form input {
+  color: var(--color-primary);
+  font-family: "Inter";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+
+  border: none;
+  background-color: transparent;
+  align-self: stretch;
+  padding: 0.5rem;
+
+}
+
+.form form input::placeholder {
+  color: var(--neutral-05);
+  font-family: "Inter";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--color-primary);
+  padding: 5rem 4rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.footer-up {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.between {
+  color: var(--neutral-02);
+  padding-left: 2rem;
+  border-left: 1px solid var(--neutral-05);
+
+  width: 28.33%;
+}
+
+.right-nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.right-nav ul li a {
+  color: var(--neutral-03);
+  font-family: "Inter";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.footer-below {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 1px solid var(--neutral-05);
+  padding: 1rem 0rem;
+}
+
+.footer-below-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.75rem;
+
+
+  color: var(--neutral-03);
+  font-family: "Inter";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+
+}
+
+.footer-below-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+gap: 1.5rem;
+
 }
