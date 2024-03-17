@@ -67,6 +67,15 @@ h2 {
   text-transform: uppercase;
 }
 
+h6 {
+  color: var(--color-primary);
+  font-family: "Poppins";
+  font-size: 1.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 body {
   /* max-width: 1440px; */
   background: var(--neutral-01);
@@ -407,14 +416,14 @@ nav ul li a:hover::after {
   object-fit: cover;
 }
 
-.novel-title h6 {
+/* .novel-title h6 {
   color: var(--color-primary);
   font-family: "Poppins";
   font-size: 1.9375rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-}
+} */
 
 .novel-title p {
   color: var(--neutral-05);
@@ -849,3 +858,178 @@ footer {
   margin-bottom: 3.5rem;
 }
 
+
+
+
+/* BODY CONTENT */
+.body-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* side bar */
+.side-bar {
+  width: 26.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+
+  padding: 4rem 0rem;
+}
+
+.side-bar span a {
+  color: var(--neutral-04);
+  font-family: "Inter";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+.side-bar span:nth-child(2) a {
+  color: var(--color-primary) !important;
+}
+
+/* grid content */
+.grid-content {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.arrange-btns {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 1rem;
+  padding: 0rem 0rem 1.5rem 0rem;
+}
+
+.arrange-btns .ic-arrange {
+  padding: 0.5rem 0.75rem;
+  background-color: var(--neutral-01);
+}
+
+.grid-item-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+  gap: 2rem;
+
+}
+
+.card-items {
+  min-width: 12.75rem;
+  max-width: 26.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 0.5rem;
+
+
+  position: relative;
+}
+
+.card-item-img {
+  width: 100%;
+  height: 23.5rem;
+
+  overflow: hidden;
+  border-radius: var(--border-img);
+}
+
+.card-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.tags {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+.new-tag {
+  width: 5rem;
+  height: 2.48756rem;
+  padding: 0.5rem 1.125rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--neutral-01);
+  border-radius: var(--border-cta-btn);
+
+  color: var(--color-primary);
+  font-family: "Inter";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.coupon-tag {
+  width: 5rem;
+  height: 2.48756rem;
+  padding: 0.5rem 1.125rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-secondary);
+  border-radius: var(--border-cta-btn);
+
+  color: var(--neutral-01);
+  font-family: "Inter";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* gap: -0.25rem; */
+}
+
+.card-detail span {
+  color: var(--color-primary);
+  font-family: "Inter";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
