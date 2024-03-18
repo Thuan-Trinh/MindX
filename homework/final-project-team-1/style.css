@@ -688,6 +688,8 @@ nav ul li a:hover::after {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  border: none;
   border-radius: 0.5rem;
   background: var(--color-primary);
 }
@@ -853,7 +855,7 @@ footer {
 .catalog-banner h2 {
   position: absolute;
   right: 3rem;
-  top: 3rem;
+  top: 8.5rem;
 }
 
 /* BODY CONTENT */
@@ -1031,6 +1033,7 @@ footer {
 }
 
 #grid-content-2 {
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -1087,7 +1090,7 @@ footer {
   object-fit: cover;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
   .catalog-banner img {
     height: 100%;
     position: absolute;
@@ -1106,5 +1109,33 @@ footer {
     gap: 2rem;
   
     margin-bottom: 3.5rem;
+  }
+
+  #grid-content-2 {
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem 2rem;
+  
+    margin-bottom: 3.5rem;
+  }
+  .grid-card-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* grid-row-start: 1;
+    grid-row-end: 3; */
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  
+    gap: 1rem;
+  }
+  .bottom-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

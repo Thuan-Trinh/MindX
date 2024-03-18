@@ -82,4 +82,43 @@ footerNode.appendChild(timezoneElement);
 
 //form + clock: event capturing + event bubbling
 //set Timeout, set interval
+/*
+console.log('Before setTimeOut');
+
+const timer = setTimeout(function () {
+    console.log('During setTimeOut');
+
+}, 300);
+clearTimeout(timer);
+
+console.log('After setTimeOut');
+*/
+
+const countTime = document.getElementById('count-time');
+let date = new Date();
+let min = date.getMinutes();
+let sec = date.getSeconds();
+let hour = date.getHours();
+const formatTimer = (num) => {
+    if (num < 10){
+        return '0'+ num;
+    }
+    return num;
+}
+
+setInterval(function () {
+    // console.log(new Date().getMilliseconds());
+    sec += 1;
+    if (sec>=60){
+        sec = 0;
+        min +=1;
+        if (min>=60){
+            min = 0;
+            hour+=1;
+        }
+    }
+
+    countTime.innerHTML = `${formatTimer(hour)} : ${formatTimer(min)} : ${formatTimer(sec)}`;
+
+}, 1000);
 
