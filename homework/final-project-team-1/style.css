@@ -400,7 +400,6 @@ nav ul li a:hover::after {
   justify-content: space-between;
   align-items: start;
   gap: 1rem;
-
 }
 
 .img-card {
@@ -669,7 +668,6 @@ nav ul li a:hover::after {
   gap: 0.5rem;
 
   border-bottom: 1px solid var(--neutral-04);
-
 }
 
 .form form {
@@ -679,7 +677,6 @@ nav ul li a:hover::after {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 0rem;
-
 
   align-self: stretch;
 }
@@ -718,6 +715,7 @@ nav ul li a:hover::after {
   align-self: stretch;
   padding: 0.5rem;
 
+  outline: none;
 }
 
 .form form input::placeholder {
@@ -798,7 +796,6 @@ footer {
   font-style: normal;
   font-weight: 400;
   line-height: 1rem;
-
 }
 
 .footer-below-right {
@@ -811,10 +808,6 @@ footer {
 
 /* END OF HOME PAGE */
 
-
-
-
-
 /* CATALOG PAGE */
 .breadCrums {
   display: flex;
@@ -824,7 +817,6 @@ footer {
   gap: 0.5rem;
 
   padding: 0.5rem 0rem 1rem 0rem;
-
 }
 
 .breadCrums span {
@@ -850,16 +842,19 @@ footer {
   overflow: hidden;
   background-color: rgba(235, 235, 235, 1);
 
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  
   margin-bottom: 3.5rem;
+  position: relative;
+}
+.catalog-banner img {
+  height: 100%;
+  position: absolute;
 }
 
-
-
+.catalog-banner h2 {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+}
 
 /* BODY CONTENT */
 .body-content {
@@ -872,7 +867,7 @@ footer {
 
 /* side bar */
 .side-bar {
-  width: 26.5rem;
+  width: 23.66%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -898,12 +893,13 @@ footer {
 
 /* grid content */
 .grid-content {
-  width: 83.5rem;
+  width: 76.34%;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
+  align-items: center;
+
   padding-bottom: 3.5rem;
 }
 
@@ -925,28 +921,20 @@ footer {
 }
 
 #grid-item-cards {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
 
   margin-bottom: 3.5rem;
 }
 
 .card-items {
-  width: 100%;
-  /* min-width: 12.75rem; */
-  /* max-width: 26.5rem; */
+  width: (100%);
+  /* min-width: 12.75rem;
+  max-width: 23.5rem; */
 }
 
 .card {
-  min-width: 12.75rem;
-  max-width: 26.5rem;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -962,13 +950,14 @@ footer {
 
   overflow: hidden;
   border-radius: var(--border-img);
+
+  margin-bottom: 0.5rem;
 }
 
 .card-item-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
 
 .tags {
@@ -1046,11 +1035,11 @@ footer {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 1rem 2rem;
-  
+
   margin-bottom: 3.5rem;
 }
 
-.grid-card-1{
+.grid-card-1 {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -1073,28 +1062,49 @@ footer {
   line-height: 150%;
 }
 
-.grid-card-1 .grid-card-img{
+.grid-card-1 .grid-card-img {
   width: 100%;
   height: 100%;
   overflow: hidden;
   border-radius: var(--border-img);
 }
 
-.grid-card-1 .grid-card-img img{
+.grid-card-1 .grid-card-img img {
   width: 100%;
   height: 100%;
 }
 
-.bottom-img{
+.bottom-img {
   width: 100%;
   height: 26.625rem;
   overflow: hidden;
   border-radius: var(--border-img);
-
 }
 
-.bottom-img img{
+.bottom-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .catalog-banner img {
+    height: 100%;
+    position: absolute;
+    left: -10rem;
+  }
+
+  .catalog-banner h2 {
+    position: absolute;
+    right: 3rem;
+    top: 9rem;
+  }
+
+  #grid-item-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  
+    margin-bottom: 3.5rem;
+  }
 }
